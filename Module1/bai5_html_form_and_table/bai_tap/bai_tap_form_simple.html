@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Form</title>
+</head>
+<body>
+    <form style="width: 500px; color: white; background-color: snow" method="post" class="wufoo">
+
+        <h2 style="background-color: orange" align="center">SỞ THÍCH CỦA BẠN</h2>
+        <label style="color: blue; margin-right: 20px; margin-left: 20px">Họ và tên</label><input size="35px" type="text" name="yourname"><br><br>
+        <label style="color: blue; margin-right: 10px; margin-left: 60px">Email</label> <input  type="email" name="email"><br><br>
+        <label style="color: blue; margin-right: 10px; margin-left: 30px">Sở thích</label>
+        <input type="checkbox" name="hobby" value="Thểthao"><span style="color: orange"> Thể thao</span>
+        <input type="checkbox" name="hobby" value="Âm nhạc"><span style="color: orange"> Âm nhạc</span>
+        <input type="checkbox" name="hobby" value="Đọc sách" style="margin-left: 22px"><span style="color: orange"> Đọc sách</span><br><br>
+        <input type="checkbox" name="hobby" value="Lướt web" style="margin-left: 130px"><span style="color: orange"> Lướt web</span>
+        <input type="checkbox" name="hobby" value="Chơi game"><span style="color: orange"> Chơi game</span>
+        <input type="checkbox" name="hobby" value="Điện ảnh"><span style="color: orange"> Điện ảnh</span><br><br>
+        <input type="checkbox" name="hobby" value="Du lịch" style="margin-left: 130px"><span style="color: orange"> Du lịch</span><br><br>
+        <input type="button" name="SubmitForm" style="margin-left: 130px; font-family: 'Courier New'; background-color: lightgrey" value="Gửi thông tin">
+        <input type="reset" name="ResetForm" style="font-family: 'Courier New'; background-color:lightgrey;" value="Nhập lại">
+        <style>
+            .wufoo {
+            font-family: "Courier New", Courier, monospace;
+            }
+        </style>
+    </form>
+
+    <form style="width: 600px; color: blue; background-color: khaki; font-family: 'Courier New';" method="post">
+        <h1 style="color: blue; background-color: aqua">ĐĂNG KÝ HỌC VIÊN</h1>
+        Họ và tên<span style="margin-right: 40px"></span><input type="text" name="name" size="40px"><br><br>
+        Ngày sinh<span style="margin-right: 40px"></span><input type="date" name="birthday"><br><br>
+        Giới tính<span style="margin-right: 30px"></span><label style="color: black"><input type="radio" name="gender" value="Nam">Nam</label><label style="color: black"><input type="radio" name="gender" value="Nữ">Nữ</label><br><br>
+        Địa chỉ<span style="margin-right: 55px; margin-top: 5px"></span><textarea cols="35" rows="4"></textarea><br><br>
+        Lớp<span style="margin-right: 95px"></span><select name="class">
+            <option>-Chọn lớp-</option>
+            <option>7A</option>
+            <option>7B </option>
+            <option>7C</option>
+            </select><br><br>
+        Email<span style="margin-right: 75px"></span><input type="email" name="email" style="width: 200px"><br><br>
+        Điện thoại<span style="margin-right: 25px"></span><input type="tel" name="telephone" style="width: 200px"><br><br>
+        <button type="button" name="SubmitForm" style="background-color: lightgrey; margin-left: 120px; width: 100px" >Đăng ký</button>
+        <button type="button" name="ResetForm" style="background-color: lightgrey; width: 100px">Nhập lại</button>
+
+    </form>
+
+</body>
+</html>
