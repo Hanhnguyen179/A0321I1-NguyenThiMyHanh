@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator application</title>
+</head>
+<body>
+    <form>
+        <input id="inp1">
+        <input id="inp2"></br></br>
+        <button type="button" value="add" onclick="return calc(this.value)">Addition(+)</button>
+        <button type="button" value="sub" onclick="return calc(this.value)">Subtraction(-)</button>
+        <button type="button" value="mul" onclick="return calc(this.value)">Multiplication(X)</button>
+        <button type="button" value="div" onclick="return calc(this.value)">Division(/)</button></br></br>
+    </form>
+    <script>
+
+            function calc(count) {
+                let inputA = document.getElementById('inp1').value;
+                let inputB = document.getElementById('inp2').value;
+                let a = parseInt(inputA);
+                let b = parseInt(inputB);
+                let result = 0;
+                if (isNaN(a) || isNaN(b)) {
+                    alert("Input a number");
+                } else {
+                    switch (count) {
+                        case 'add':
+                            result = a + b;
+                            break;
+                        case 'sub':
+                            result = a - b;
+                            break;
+                        case 'mul':
+                            result = a * b;
+                            break;
+                        case 'div':
+                            result = a / b;
+                            break;
+                    }
+                    document.getElementById('result').innerHTML = 'Result is ' + result;
+                }
+            }
+    </script>
+    <p id="result"></p>
+</body>
+</html>
