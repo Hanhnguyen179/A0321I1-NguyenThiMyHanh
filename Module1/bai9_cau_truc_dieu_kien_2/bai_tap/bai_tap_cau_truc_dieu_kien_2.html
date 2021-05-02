@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bai 1
+        /*let c = parseFloat(prompt("Input Celsius degree: "));
+        let f;
+        if(isNaN(c)) {
+            alert("Input a number!");
+        } else {
+            f = c*9/5+32;
+            alert("Fahrenheit degree is " + f);
+        }*/
+
+        //Bai 2
+       /* let m = parseFloat(prompt("Input meter: "));
+        let ft;
+        if(isNaN(m)) {
+            alert("Input a number!");
+        } else {
+            ft= m * 3.2808;
+            alert(m + " m equals to " + ft + " ft");
+        }*/
+
+        //Bai 3
+        /*let a = parseFloat(prompt("Input side of the square:"));
+        let s;
+        if(isNaN(a)) {
+            alert("Input a number!");
+        } else {
+            s = Math.pow(a,2);
+            alert("Area of the square is " + s)
+        }*/
+
+        //Bai 4
+       /* let a = parseFloat(prompt("Input length of the rectangle:"));
+        let b = parseFloat(prompt("Input width of the rectangle:"));
+        let s;
+        if(isNaN(a)|| isNaN(b)) {
+            alert("Input a number!");
+        } else {
+            s = a * b;
+            alert("Area of the rectangle is " + s);
+        }*/
+
+        //Bai 5
+     /*   let a = parseFloat(prompt("Input a:"));
+        let b = parseFloat(prompt("Input b:"));
+        let s;
+        if(isNaN(a) || isNaN(b)) {
+            alert("Input a number!");
+        } else {
+            s = 1/2*a*b;
+            alert("Area of the triangle is" + s)
+        }*/
+
+        //Bai 6 - Giai phuong trinh bac nhat
+     /*   let a = Number(prompt("Input a:"));
+        let b = Number(prompt("Input b:"));
+        let x = (-b)/a;
+        if (a==0) {
+            alert("a must be different from 0");
+        } else {
+        document.write("The equation " + a + "x + " + b + " = 0  has x = "+x);
+        }
+        */
+        //Bai 7 -  Giai phuong trinh bac 2
+
+        /*let a = Number(prompt("Input variable a"));
+        let b = Number(prompt("Input variable b"));
+        let c = Number(prompt("Input variable c"));
+        let delta = Math.pow(b,2) - 4*a*c;
+        document.write("Quadratic equation is " + a + "x^2 + " + b + "x + "+c+" = 0 <br>");
+        document.write("Delta = " + delta + "<br>");
+        let x1,x2;
+        if(a==0) {
+            alert("a must be different from 0");
+        } else if (delta==0) {
+            x1 = -b/(2*a);
+            document.write("Quadratic equation has x = " + x1);
+        } else if (delta>0) {
+            x1 = (-b + Math.sqrt(delta))/(2*a);
+            x2 = (-b - Math.sqrt(delta))/(2*a);
+            document.write("Quadratic equation has x1 = " + x1 + " and x2 = " + x2);
+        } else if (delta<0) {
+            document.write("Equation has no solution");
+        }*/
+
+        //Bai 8 - Kiem tra tuoi
+        /*let age = parseInt(prompt("Enter your age!"));
+        if(age<=0 || age>120){
+            alert("This is not human age!");
+        } else {
+            alert("The age is " + age + " years old.");
+        }*/
+
+        //Bai 9 - kiem tra 3 canh tam giac
+
+        /*let a = parseFloat(prompt("Input side a:"));
+        let b = parseFloat(prompt("Input side b:"));
+        let c = parseFloat(prompt("Input side c:"));
+        if (a<=0 || b<=0 || c<=0) {
+            alert("a, b, c are not 3 sides of a triangle.");
+        } else if (a+b>c  &&  a+c>b && b+c>a) {
+            alert("a, b, c are 3 sides of a triangle.");
+        } else {
+            alert("a, b, c are not 3 sides of a triangle.");
+        }*/
+
+        //Bai 10 - Tinh gia dien
+
+       /* let kWh = parseFloat(prompt("Input your kWh usage: "));
+        let cost = 0;
+        if(kWh<=50) {
+            cost=kWh*1678;
+        } else if(kWh<=100) {
+            cost=50*1678+ (kWh-50)*1734;
+        } else if(kWh<=200) {
+            cost=50*1678 + 50*1734 + (kWh-100)*2014;
+        } else if(kWh<=300) {
+            cost=50*1678 + 50*1734 + 100*2014 + (kWh-200)*2536;
+        } else if(kWh<=400) {
+            cost=50*1678 + 50*1734 + 100*2014 + 100*2536 +(kWh-300)*2834;
+        } else {
+            cost=50*1678 + 50*1734 + 100*2014 + 100*2536 + 100*2834 + (kWh-400)*2927;
+        }
+        document.write("Your electricity consumption is " + kWh + "</br>");
+        document.write("Your electricity bill is " + cost);*/
+
+        //Bai 11 - Viết chương trình tính thuế thu nhập cá nhân.
+
+       /* let salary = Number(prompt("Input your salary subject to PIT in VNĐ"));
+        let pIT;
+        if(salary<= 5000000){
+            pIT=salary*0.05;
+            alert("You have to pay PIT 5% of your salary subject to PIT that equals to " +pIT + " VND");
+        }else if(salary<=10000000){
+            pIT=salary*0.1;
+            alert("You have to pay PIT 10% of your salary subject to PIT that equals to " +pIT + " VND");
+        }else if(salary<=18000000){
+            pIT=salary*0.15;
+            alert("You have to pay PIT 15% of your salary subject to PIT that equals to " +pIT + " VND");
+        }else if(salary<=32000000){
+            pIT=salary*0.2;
+            alert("You have to pay PIT 20% of your salary subject to PIT that equals to " +pIT + " VND");
+        }else if(salary<=52000000){
+            pIT=salary*0.25;
+            alert("You have to pay PIT 25% of your salary subject to PIT that equals to " +pIT + " VND");
+        }else if(salary<=80000000){
+            pIT=salary*0.3;
+            alert("You have to pay PIT 30% of your salary subject to PIT that equals to " +pIT + " VND");
+        }else {
+            pIT=salary*0.35;
+            alert("You have to pay PIT 35% of your salary subject to PIT that equals to " +pIT + " VND");
+        }
+*/
+        //Bai 12 - Viết chương trình tính lãi ngân hàng
+
+        let amount = Number(prompt("Input the amount of the loan"));
+        let month = Number(prompt("Input time on a monthly basis with the interest rate of 6.2% a year"));
+        let interest = 0;
+        let totalInterest = interest;
+        if (month>1) {
+            for (let i=1;i<=month;i++) {
+                interest = ((totalInterest+amount)*(6.2/12))/100;
+                totalInterest += interest;
+                document.write("Monthly interest of the month number " + i + " is "+interest.toFixed(2)+ " VND<br>");
+            }
+        }
+        document.write("The total interest of the loan of " + amount + " VND in "+month+" months is "+totalInterest.toFixed(2)+" VND");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br><input type="button" value="Bài 1" onclick="bai_1()">Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộng thoại thông báo
+<br><input type="button" value="Bài 2" onclick="bai_2()"> Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+<br><input type="button" value="Bài 3" onclick="bai_3()">Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+<br><input type="button" value="Bài 4" onclick="bai_4()"> Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+<br><input type="button" value="Bài 5" onclick="bai_5()">Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+<br><input type="button" value="Bài 6" onclick="bai_6()"> Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
+<br><input type="button" value="Bài 7" onclick="bai_7()">Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+<br><input type="button" value="Bài 8" onclick="bai_8()"> Game đoán số
+
+<script>
+  function bai_1() {
+
+    for(let count = 1; count<=100;count++) {
+    document.write(count + " ");
+    if (count==99) {
+        alert("Completed!");
+        }
+    }
+  }
+
+  function bai_2() {
+      let tem = parseInt(prompt("Input current temperature: "));
+      while (tem < 20 || tem > 100) {
+          if (tem < 20) {
+              alert("Please turn up the temperature!");
+              tem = parseInt(prompt("Input current temperature:"));
+          } else if (tem > 100) {
+              alert("Please turn down the temperature!");
+              tem = parseInt(prompt("Input current temperature:"));
+          }
+      }
+      alert("The temperature is okay!");
+  }
+
+  function bai_3() {
+      let F = 0 , F1= 0, F2=0;
+      let fibonacci = " ";
+      for (let i=0; i<20;i++){
+          if(i==0){
+              F=1;
+              F2=1;
+              fibonacci += F+ " ";
+          }else{
+
+              F= F1+F2;
+              F1 = F2;
+              F2 = F;
+              fibonacci += F+ " ";
+          }
+      }
+      document.write(fibonacci);
+  }
+
+
+
+  function bai_4(){
+      // Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+
+      let F = 0 , F1= 0, F2=0;
+      let divide5 = " ";
+      let fibonacci = " ";
+      for (let i=0; i<20;i++){
+          if(i==0){
+              F=1;
+              F2=1;
+              fibonacci += F+ " ";
+          }else{
+
+              F= F1+F2;
+              F1 = F2;
+              F2 = F;
+              fibonacci += F+ " ";
+              if(F%5==0){
+                  divide5= F;
+                  break;
+              }
+          }
+      }
+
+      document.write("The first number divisible by 5 of Fibonacci sequence is "+ divide5);
+  }
+
+  function bai_5() {
+      // Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+      let F = 0 , F1= 0, F2=0;
+      let fibonacci = "";
+      let total=0;
+      for (let i=0; i<20;i++) {
+          if (i==0) {
+              F=1;
+              F2=1;
+              fibonacci += F+ " ";
+              total = total + F;
+          } else {
+              F= F1+F2;
+              F1 = F2;
+              F2 = F;
+              fibonacci += F+ " ";
+              total = total + F;
+          }
+      }
+      document.write("The first 20 numbers of Fibonacci sequence are: "+ fibonacci +"<br>");
+      document.write("Total of the above Fibonacci numbers is = "+ total);
+  }
+
+  function bai_6() {
+      //Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên
+      let count = 0, total =0;
+      let sequence = " ";
+      for (let i=1; ; i++){
+          if (i%7==0) {
+              sequence += i + " ";
+              total += i;
+              count++;
+              if (count == 30) {
+                  break;
+              }
+          }
+      }
+      document.write(sequence+"<br>");
+      document.write("Total is "+ total);
+  }
+
+  function bai_7() {
+      //viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz"
+      for (let i=1; i<=100; i++){
+          if (i%3==0 && i%5==0){
+              document.write("FizzBuzz <br>");
+              continue;
+          }else if (i%3==0){
+                  document.write("Fizz <br>");
+                  continue;
+              }
+              else if(i%5==0){
+                  document.write("Buzz <br>")
+                  continue;
+              }
+              document.write(i + "<br>");
+          }
+      }
+
+
+  function bai_8() {
+      //Game đoán số
+
+      let range = Number(prompt("Game guessing the number in the range from 0 to: "));
+      let answer= Number(prompt("Enter your answer!"));
+      let randomNum;
+      let count=1;
+      if(range){
+          randomNum = Math.floor(Math.random()*range);
+          if(randomNum == answer){
+              alert("Congratulations! Your answer is correct!");
+          }else{
+              while (randomNum != answer){
+                  if (randomNum>answer) {
+                      alert("Your answer is less than the number.");
+                  } else {
+                      alert("Your answer is greater than the number.");
+                  }
+                  answer = Number(prompt("Enter your answer!"));
+                  count++;
+                  if (count==4) {
+                      alert("Sorry. You lose the game. The number is " + randomNum);
+                      break;
+                  }
+              }
+          }
+      }
+  }
+
+</script>
+
+</body>
+</html>

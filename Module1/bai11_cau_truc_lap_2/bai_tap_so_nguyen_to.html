@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // var i = parseInt(prompt("Enter a number: "));
+    // var count=0;
+    // var N=2;
+    // while (count<i){
+    //     if(isPrime(N)) {
+    //         count++;
+    //         document.write(N);
+    //     }
+    //     N++;
+    // }
+    // function isPrime(N) {
+    //     for(let i =2; i< N;i++) {
+    //         if(N%i==0) {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+
+    var i = parseInt(prompt("Enter a number: "));
+    var count = 0;
+    var N = 2;
+    while (count < i) {
+        let check = true;
+        for (let i = 2; i < N; i++) {
+            if (N % i == 0) {
+                check = false;
+                break;
+            }
+        }
+        if (check) {
+            count++;
+            document.write(N);
+        }
+        N++;
+    }
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

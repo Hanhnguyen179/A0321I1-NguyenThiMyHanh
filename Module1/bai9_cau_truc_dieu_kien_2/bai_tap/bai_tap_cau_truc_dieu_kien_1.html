@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bai 1
+        /*let a = parseInt(prompt("Nhập số a:", ""));
+        let b = parseInt(prompt("Nhập số b:", ""))
+        let c = a % b;
+        if (c==0) {
+            alert("a chia hết cho b");
+        } else {
+            alert("a không chia hết cho b");
+        }
+        */
+
+        //Bai 2
+        /*let age = parseInt(prompt("Enter your age:", ""));
+        if(age<15) {
+            document.write("You are not old enough to be admitted to grade 10");
+        } else {
+            document.write("You are admitted to grade 10");
+        }*/
+
+        //Bai 3
+        /*let number = parseInt(prompt("Input a number:"));
+        if (number>0) {
+            document.write("This is a positive number");
+        } else if(number<0) {
+            document.write("This is a negative number");
+        } else {
+            document.write("This is 0");
+        }*/
+
+        //Bai 4
+       /* let a = parseInt(prompt("Input a:"));
+        let b = parseInt(prompt("Input b:"));
+        let c = parseInt(prompt("Input c:"));
+        if(a>b && a>c) {
+            document.write("a la so lon nhat");
+        } else if(b>c) {
+            document.write("b la so lon nhat");
+            } else {
+                document.write("c la so lon nhat");
+        }*/
+
+        //Bai 5
+       /*let test = parseInt(prompt("Input test mark: "));
+       let mid = parseInt(prompt("Input mid-term test mark: "));
+       let final = parseInt(prompt("Input final test mark: "));
+       let avg = (test+mid+final)/3;
+       if(avg<3.5) {
+           document.write("Poor");
+       } else if(avg<6.5) {
+           document.write("Average");
+       } else if(avg<8.5) {
+           document.write("Good");
+       } else{
+           document.write("Very good");
+       }*/
+
+        //Bai 6
+       /*let rev = parseInt(prompt("Enter your revenue: "));
+       let com;
+       if(rev>100000) {
+           com=rev*0.3;
+           alert("Your commission is " + com);
+       } else if(rev>70000) {
+           com=rev*0.2;
+           alert("Your commission is " + com);
+       } else if(rev>40000) {
+           com=rev*0.15;
+           alert("Your commission is " + com);
+       } else if(rev>10000) {
+           com=rev*0.1;
+           alert("Your commission is " + com);
+       } else {
+           com=rev*0.05;
+           alert("Your commission is " + com);
+       }*/
+
+        //Bai 7
+        let min=parseFloat(prompt("Input your call length: "));
+        let cost;
+        if(min<=1) {
+            cost=min*3000;
+        } else if(min<=5) {
+            cost= 1*3000 + (min-1)*2850;
+        } else if(min<=15) {
+            cost=1*3000 + 4*2850 + (min-5)*2600;
+        } else if(min<=60) {
+            cost=1*3000 + 4*2850 + 10*2600 + (min-15)*2250;
+        } else {
+            cost=1*3000 + 4*2850 + 10*2600 + 45*2250 + (min-60)*1850;
+        }
+        document.write("The length of your call is " + min +"</br>");
+        document.write("Cost of your call is " + cost);
+    </script>
+</body>
+</html>
