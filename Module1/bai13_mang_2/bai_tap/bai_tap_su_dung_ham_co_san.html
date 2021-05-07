@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<br><input type="button" value="Bài 1" onclick="bai_1()">
+<br><input type="button" value="Bài 2" onclick="bai_2()">
+<br><input type="button" value="Bài 3" onclick="bai_3()">
+
+<script>
+    function bai_1() {
+        let myColor = ["Red", "Green", "White", "Black"];
+        document.write(myColor.join());
+    }
+    
+    function bai_2() {
+        let numbers = prompt("Input numbers");
+        let str = numbers.toString();
+        let result = [str[0]];
+        for(let x=1; x<str.length; x++) {
+            if((str[x-1]%2 === 0)&&(str[x]%2 === 0)) {
+                result.push('-', str[x]);
+            } else {
+                result.push(str[x]);
+            }
+        }
+        document.write(result.join(''));
+    }
+
+    function bai_3() {
+        let cont = prompt("Input content");
+        let str = cont.toString();
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+
+        for(let x=0; x < str.length; x++) {
+            if(UPPER.indexOf(str[x]) !== -1) { //nếu có phần tử nào của chuỗi str là một phần tử của chuỗi UPPER
+                result.push(str[x].toLowerCase());
+            }
+            else if(LOWER.indexOf(str[x]) !== -1) { //nếu có phần tử nào của chuỗi str là một phần tử của chuỗi LOWER
+                result.push(str[x].toUpperCase());
+            }
+            else {
+                result.push(str[x]);
+            }
+        }
+        document.write(result.join(''));
+    }
+</script>
+</body>
+</html>

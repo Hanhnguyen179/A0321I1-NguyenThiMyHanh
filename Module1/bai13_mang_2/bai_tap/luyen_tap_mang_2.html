@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <br><input type="button" value="Bài 1" onclick="bai_1()"> Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng
+    <br><input type="button" value="Bài 2" onclick="bai_2()"> Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược
+    <br><input type="button" value="Bài 3" onclick="bai_3()">Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng
+    <br><input type="button" value="Bài 4" onclick="bai_4()">Viết một chương trình để đếm số từ trong một chuỗi
+    <br><input type="button" value="Bài 5" onclick="bai_5()">Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+    <br><input type="button" value="Bài 6" onclick="bai_6()">Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+
+    <script>
+    function  bai_1() {
+        let a = [[5, 2, 9, 17], [2, 81, 19, 24], [14, 10, 7, 16], [9, 14, 0, 37], [91, 11, 72, 6]];
+
+        for (let i in a) {
+            document.write("row " + i + "</br>");
+            for (let j in a[i]) {
+                document.write(a[i][j] +"</br>");
+            }
+        }
+
+    }
+
+    function bai_2() {
+        let array = ['c', 's', 'c', 7, 9, 10, 8];
+        let newArray = [];
+        newArray= array.reverse();
+        document.write(newArray.join(""));
+    }
+
+    function bai_3() {
+        let array = ["17xy", 99, "flowers", "beach", 5, "river", 10, "summer", "spring", "mountain", 35, "etc.."];
+        let count=0;
+        for(let i=0; i<array.length; i++) {
+            if (typeof array[i] == "number"){
+            count++;
+            }
+        }
+    document.write("Array has " + count + " numbers.");
+    }
+
+    function bai_4() {
+
+        let array = ["hello",1, 0, 99, "xyz", "beach",62, "winter", 15, "snow", "etc", "light"];
+        let count =0;
+        for(let i=0; i<array.length; i++) {
+            if(typeof array[i] == "string") {
+                 count++;
+             }
+        }
+        document.write("Array has " + count + " string elements.");
+    }
+    function bai_5() {
+        let string1 = prompt("Input first string.");
+        let string2 = prompt("Input second string.");
+        let compare = true;
+        document.write("String 1: " + string1 + "</br>" + "String 2: " + string2 + "</br>");
+        if (string1.length !== string2.length) {
+            document.write("These two strings are not the same.");
+        } else {
+            for (let i = 0; i < string1.length; i++) {
+                for (let j = 0; j < string2.length; j++) {
+                    if(string1[i] === string2[j]) {
+                        compare=true;
+                    } else {
+                        compare=false;
+                    }
+                }
+            }
+        } if (compare) {
+            document.write("These two strings are the same.");
+        } else {
+            document.write("These two strings are not the same.");
+        }
+    }
+
+    function bai_6() {
+
+        let array = new Array(prompt("Input a string"));
+        let arrayNew = [];
+        document.write("Array = [" + array + "] </br>");
+        for(let i =0; i<array.length; i++) {
+            for (let j=0; j<array[i].length; j++){
+                if(array[i][j] == "-"){
+                    arrayNew.push("_");
+                }else{
+                    arrayNew.push(array[i][j]);
+                }
+            }
+        }
+        document.write("New array = [" + arrayNew.join("") +"] </br>");
+
+        /*let array = new Array(prompt("Input a string"));
+        let arrayNew = [];
+        for(let i =0; i<array.length; i++) {
+            document.write("Array = [" + array + "] </br>");
+            if(array[i]== "-") {
+                arrayNew.push("_");
+            } else {
+                arrayNew.push(array[i]);
+            }
+        }
+         document.write("New array = [" + arrayNew.join("") +"] </br>");
+*/
+         }
+
+
+    </script>
+</body>
+</html>

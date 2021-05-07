@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <br><input type="button" value="Bài 1" onclick="bai_1()"> Tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10 trong mảng.
+    <br><input type="button" value="Bài 2" onclick="bai_2()"> Hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+    <br><input type="button" value="Bài 3" onclick="bai_3()"> Hiển hiện giá trị lớn nhất trong mảng. In ra giá trị trung bình của các phần tử trong mảng.
+    <br><input type="button" value="Bài 4" onclick="bai_4()"> Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+    <br><input type="button" value="Bài 5" onclick="bai_5()"> Viết chương trình đếm số nguyên âm trong một chuỗi
+    <br><input type="button" value="Bài 6" onclick="bai_6()"> Tìm xem V có nằm trong mảng số nguyên không?
+    <br><input type="button" value="Bài 7" onclick="bai_7()"> Kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho, xoá V khỏi mảng.
+    <br><input type="button" value="Bài 8" onclick="bai_8()"> Sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+    <br><input type="button" value="Bài 9" onclick="bai_9()">
+<script>
+
+    function bai_1() {
+        let integer = [1,15,7,9,10,55,3,5,8,65];
+        let int = [];
+        for (let i = 0; i < integer.length; i++) {
+            if (integer[i] >= 10) {
+                int.push(integer[i]);
+            }
+        }
+        document.write(int.join());
+    }
+
+    function bai_2() {
+        let integerNum = [10, 205, 99, 179, 218, 5, 75, 25, 37, 90];
+        let max = 0, index = 0;
+        for (let i = 0; i<integerNum.length; i++) {
+            if(max<integerNum[i]) {
+                max = integerNum[i];
+                index = i;
+            }
+
+        } document.write("Max is " + max + " at the position " + index + ".");
+    }
+
+    function bai_3() {
+        let integerNum = [10, 205, 99, 179, 218, 5, 75, 25, 37, 90];
+        let max = 0, index = 0;
+        let total = 0;
+        let average = 0;
+        for (let i = 0; i<integerNum.length; i++) {
+            if(max<integerNum[i]) {
+                max = integerNum[i];
+                index = i;
+            }
+            total+=integerNum[i];
+            average = total/integerNum.length;
+        } document.write("Max is " + max + " at the position " + index + ".</br>");
+          document.write("Average of the array is " + average + ".");
+    }
+
+    function bai_4() {
+        let integerNum = new Array(7);
+        for(let i=0;i<integerNum.length; i++){
+            integerNum[i] = Number(prompt("Enter integer numbers into the array."));
+        }
+        document.write("integerNum = ["+integerNum+"]</br>");
+        document.write("integerNum = ["+integerNum.reverse()+"]");
+    }
+
+    function bai_5() {
+        let integerNum = new Array(10);
+        let count = 0;
+        for(let i=0;i<integerNum.length; i++){
+            integerNum[i] = Number(prompt("Enter integer numbers into the array."));
+            if(integerNum[i]<0) {
+            count++;
+            }
+        }
+        document.write("integerNum = ["+integerNum+"]</br>");
+        document.write("There are " + count + " positive integer numbers.</br>");
+        }
+        
+        function bai_6() {
+            let integerNum = new Array(10);
+            let v = 17;
+            for(let i=0;i<integerNum.length; i++) {
+                integerNum[i] = Number(prompt("Enter integer numbers into the array."));
+            }
+            document.write("integerNum = ["+integerNum+"]</br>");
+            if(integerNum.indexOf(v) !== -1) {
+                document.write(v + " is in the array.");
+            } else {
+                    document.write(v + " is not in the array.");
+            }
+        }
+    function bai_7() {
+        let integer = new Array(10);
+        let v = 17;
+        let boo=true;
+        let newInteger=[];
+        for(let i=0;i<integer.length; i++) {
+            integer[i] = Number(prompt("Enter integer numbers into the array."));
+            if (integer[i] != v) {
+                newInteger.push(integer[i]);
+            }
+            if (integer[i] == v){
+                newInteger.splice(i,1);
+                boo=false;
+            }
+        }
+        if(!boo) {
+            newInteger.push(0);
+        }
+        document.write("integer = ["+integer+"]</br>");
+        document.write("newInteger = ["+newInteger+"]</br>");
+        }
+
+    function bai_8() {
+        let integerNum = [10, 205, 99, 179, 218, 5, 75, 25, 37, 90];
+        integerNum.sort(function (a, b) {
+            return b - a;
+        });
+        document.write(integerNum.join("-"));
+    }
+
+    function bai_9() {
+        let a = [10, 205, 99, 179, 218, 5, 75, 25, 37, 90];
+        let b = [1, 7, 9, 85, 67, 33, 21, 92, 94, 58];
+        let c = [];
+        c.push(a, b);
+        document.write(c.join());
+    }
+
+</script>
+</body>
+</html  >
