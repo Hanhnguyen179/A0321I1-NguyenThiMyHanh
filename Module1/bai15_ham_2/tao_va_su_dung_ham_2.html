@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <br><input type="button" value="Bài 1" onclick="bai_1()">Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    <br><input type="button" value="Bài 2" onclick="bai_2()">Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+    <br><input type="button" value="Bài 3" onclick="bai_3()">Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    <br><input type="button" value="Bài 4" onclick="bai_4()">Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+    <br><input type="button" value="Bài 5" onclick="bai_5()">Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    <br><input type="button" value="Bài 6" onclick="bai_6()">Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
+    <br><input type="button" value="Bài 7" onclick="bai_7()">Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+    <br><input type="button" value="Bài 8" onclick="bai_8()">Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    <br><input type="button" value="Bài 9" onclick="bai_9()">Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+<script>
+    //Bai 1
+    function square(x) {
+        x = Math.pow(x,2);
+        return x;
+    }
+    function bai_1() {
+        let number=parseFloat(prompt("Input a number"));
+        let result = square(number);
+        document.write("Square of " + number + " is " + result.toFixed(2));
+    }
+
+    //Bai 2
+    function findCircleArea(r) {
+       let result = Math.pow(r,2) * Math.PI;
+        return result;
+    }
+    function findCircleCircumference(r) {
+        let result= 2*r*Math.PI;
+        return result;
+    }
+    function bai_2() {
+        let radius = parseFloat(prompt("Input radius of a circle: "));
+        let area = findCircleArea(radius);
+        let circumference = findCircleCircumference(radius);
+        document.write("Area of the circle is " +area.toFixed(2)+"</br> Circumference of the circle is "+circumference.toFixed(2));
+    }
+
+    //Bai 3
+    function findFactorial(x) {
+        let result=1;
+        for(let i=1;i<=x;i++) {
+            result*=i;
+        }
+        return result;
+    }
+    function bai_3() {
+        let number=parseInt(prompt("Input a number: "));
+        let factorial = findFactorial(number);
+        document.write("Factorial of " +number+" is "+factorial);
+    }
+
+    //Bai 4
+    function checkNumber(x) {
+        if(isNaN(x)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function bai_4() {
+        let input= prompt("Input a number: ");
+        let check=checkNumber(input);
+        if(check) {
+            alert("This is  a number");
+        } else {
+            alert("This is not a number");
+        }
+    }
+
+    //Bai 5
+    function checkMin(x,y,z) {
+        if (x<y && x<z) {
+            min=x;
+        } else if(y>z){
+            min=z;
+        } else {
+            min=y;
+        }
+        return min;
+    }
+
+    function bai_5() {
+        let a = parseInt(prompt("Input a"));
+        let b = parseInt(prompt("Input b"));
+        let c = parseInt(prompt("Input c"));
+        let result = checkMin(a,b,c);
+        document.write("Min is " + result);
+    }
+
+    //Bai 6
+    function checkPositiveInteger(x) {
+        if (x>0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function bai_6() {
+        let a = parseInt(prompt("Input an integer:"));
+        let check=checkPositiveInteger(a);
+        if(check) {
+            alert(a+" is a positive integer.");
+        } else {
+            alert(a+" is not a positive integer.");
+        }
+    }
+
+    //Bai 7
+    function swap(array) {
+        let temp= array[0];
+        array[0]=array[1];
+        array[1]=temp;
+    }
+    function bai_7() {
+    let a = parseInt(prompt("Input a"));
+    let b = parseInt(prompt("Input b"));
+    let arr=[a,b];
+    swap(arr);
+    document.write("a = "+arr[0]+" and b = "+arr[1]);
+
+    }
+
+    //Bai 8
+    function reverse(arr) {
+        return arr.reverse();
+    }
+    function bai_8() {
+        let integers= [1,3,6,8,9];
+        document.write("Integers = ["+ integers+"]</br>");
+        let result= reverse(integers);
+        document.write("Reversed Integers = ["+result +"]");
+    }
+    //Bai 9
+    function checkCharacter(arr, x) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    function bai_9() {
+        let array=["a","b","c","d","e","e","F","b","a", "g","d","b", "e","f","F","H","a", "e"];
+        let letter=prompt("Input a string: ");
+        let check=checkCharacter(array, letter);
+        document.write("There is/are "+check+" "+ letter+ " in this array");
+    }
+</script>
+
+</body>
+</html>

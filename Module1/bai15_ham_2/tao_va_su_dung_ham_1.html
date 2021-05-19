@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <br><input type="button" value="Bài 1" onclick="showMessage()"> Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi  "Xin chao".Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi  "Xin chao". Gọi hàm từ trong phần body của trang web.
+    <br><input type="button" value="Bài 2" onclick="inputNumber()"> Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm. Gọi hàm từ trong phần body của trang web và hiển thị kết quả lên màn hình.
+    <br><input type="button" value="Bài 3" onclick="bai_3()"> Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+    <br><input type="button" value="Bài 4" onclick="bai_4()"> Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau để bạn có thể nhìn thấy giá trị của biến result trước và sau lời gọi hàm.
+    <br><input type="button" value="Bài 5" onclick="bai_5()">Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus. Tạo một mảng khác với bảy phần tử dạng chuỗi có giá trị là tên các chòm sao tương ứng chứa các ngôi sao: Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo. Tiếp theo, tạo một hàm nhận vào một tham số dạng chuỗi duy nhất. Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao. Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai. Nói cách khác, trả lại tên chòm sao của ngôi sao đó. Trong phần <body> của trang web, dùng hộp thoại prompt để người dùng nhập vào tên của ngôi sao, sau đó gọi hàm với thông tin đầu vào. Đừng quên xử lý trong trường hợp không tìm thấy ngôi sao nào. Cho kết quả hiển thị trên màn hình.
+    <script>
+            //Bai 1
+            function showMessage() {
+                alert("Xin chào!");
+            }
+            
+            //Bai 2
+            function increaseBy1(x) {
+                x++;
+                return x;
+            }
+            function inputNumber() {
+                let number=increaseBy1(10);
+                alert("Input a number and increase it by 1 = " + number);
+            }
+
+            //Bai 3
+            function compare(x, y){
+                if(x>y) {
+                    alert("x is greater than y")
+                } else {
+                    return alert("Sum of x and y: " + (x+y));
+                }
+            }
+            function bai_3() {
+                let a =parseInt(prompt("Input x:"));
+                let b =parseInt(prompt("Input y:"));
+                compare(a, b);
+            }
+
+            //Bai 4
+            function addNumbers() {
+                firstNum = 4;
+                secondNum = 8;
+                result = firstNum + secondNum;
+                return result;
+            }
+            function bai_4() {
+            result = 0;
+            alert("Result before function addNumbers() = " + result);
+            result = addNumbers();
+            alert("Result before function addNumbers() = " + result);
+            }
+
+            //Bai 5
+            let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+            let constellations = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+            function findConstellation(x) {
+                for(let i = 0; i<stars.length; i++) {
+                    if (x == stars[i]) {
+                        return constellations[i];
+                    }
+                }
+                return " ";
+            }
+            function bai_5() {
+                let star = prompt("Input a star");
+                let constellation = findConstellation(star);
+                if(constellation==" "){
+                    document.write("Star can not be found");
+                } else
+                document.write(star + " belongs to " + constellation);
+            }
+    </script>
+</body>
+</html>
