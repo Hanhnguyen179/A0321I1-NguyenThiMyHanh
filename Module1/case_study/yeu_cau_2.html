@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="Bài 1" onclick="bai_1()">
+    <br><input type="button" value="Bài 2" onclick="bai_2()">
+
+<script>
+    function bai_1() {
+        let grossSal = parseFloat(prompt("Input the gross salary: "));
+        let tax = 0;
+        let netSal = 0;
+        if(grossSal < 7000000) {
+        tax=0.05 * grossSal;
+        netSal=grossSal-tax;
+        } else if(grossSal< 15000000) {
+        tax=0.1 * grossSal;
+        netSal=grossSal-tax;
+        } else {
+        tax=0.2 * grossSal;
+        netSal=grossSal-tax;
+        }
+        document.write("Your personal income tax is " +tax+ " VND and your net salary is " + netSal +" VND");
+    }
+
+    function bai_2() {
+        let letter = prompt("Input a letter:");
+        switch (letter) {
+            case "a":
+            case "A":
+            case "e":
+            case "E":
+            case "i":
+            case "I":
+            case "o":
+            case "O":
+            case "u":
+            case "U":
+                alert(letter + ' is a vowel');
+                break;
+            default:
+                alert(letter+ " is not a vowel");
+        }
+
+    }
+</script>
+</body>
+</html>

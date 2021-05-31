@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 1" onclick="bai_1()">
+<br><input type="button" value="Bài 2" onclick="bai_2()">
+<br><input type="button" value="Bài 3" onclick="bai_3()">
+<br><input type="button" value="Bài 4" onclick="bai_4()">
+<br><input type="button" value="Bài 5" onclick="bai_5()">
+    <ol>
+        <li>Coffee</li><li>Orange juice</li>
+        <li>Carrot juice</li><li>Tomato juice</li>
+        <li>Water</li><li>Coconut water</li>
+        <li>Exit order</li>
+    </ol>
+    <label>Order <select value='drinks' name='drinks'>
+        <option value='coffee'>Coffee</option>
+        <option value='orange'>Orange Juice</option>
+        <option value='carrot'>Carrot Juice</option>
+        <option value='tomato'>Tomato Juice</option>
+        <option value='water'>Water</option>
+        <option value='coconut'>Coconut Water</option>
+    </select>
+    </label>
+    <label><input type='number'></label>
+    <button>Add</button>
+    <p id="menu"></p>
+<script>
+    function bai_1() {
+        let n = parseInt(prompt("Input length of the array"));
+        let a = new Array(n);
+        let b = new Array(n);
+        let sum = 0;
+        for(let i=0;i<n;i++) {
+            a[i]=parseInt(prompt("Input element of array a: "));
+        }
+        for(let j=0;j<n;j++) {
+            sum+= a[j];
+            b[j]=sum;
+            }
+        document.write("a = ["+a+ "]");
+        document.write("b = ["+b+ "]");
+    }
+
+    function bai_2() {
+        let A = new Array(5);
+        let B = new Array(5);
+        for (let i = 0; i < A.length; i++) {
+            A[i] = Number(prompt("Enter integer numbers into array A."));
+        }
+        for (let j = 0; j < B.length; j++) {
+            B[j] = Number(prompt("Enter integer numbers into array B."));
+        }
+        let C=[];
+        for (let j=0; j<B.length; j++) {
+            if(A.indexOf(B[j])==-1) {
+                C.push(B[j]);
+            }
+        }
+        document.write("C = [" + C+ "]");
+    }
+    
+    function bai_3() {
+        let a = new Array(5);
+        let b = new Array(5);
+        let c = [];
+        for (let i = 0; i < a.length; i++) {
+            a[i] = Number(prompt("Enter integer number into array a."));
+        }
+        for (let i = 0; i < b.length; i++) {
+            b[i] = Number(prompt("Enter integer number into array b."));
+        }
+        for (let i=0; i<a.length;i++) {
+            c.push(a[i]/b[i]);
+        }
+           /* document.write("a = [" + a+ "]");
+            document.write("c = [" + c+ "]");*/
+            let max =0;
+        for (let i=0; i<c.length; i++) {
+             max=c[i];
+            if(max<c[i+1]) {
+                max=c[i+1];
+            }
+        }
+        let index = c.indexOf(max);
+        document.write("a = [" + a+ "] </br>");
+        document.write("b = [" + b+ "] </br>");
+        document.write("Max is " + a[index]+'/'+b[index] + " at the index of "+index);
+    }
+
+    function bai_4() {
+        let input = prompt("Enter a number: ");
+        let arr = Array.from(input);
+        console.log(arr);
+            for(let i=0; i<arr.length; i++) {
+                switch (arr[i]) {
+                    case "0":
+                        document.write("không ");
+                        break;
+                    case "1":
+                        document.write("một ");
+                        break;
+                    case "2":
+                        document.write("hai ");
+                        break;
+                    case "3":
+                        document.write("ba ");
+                        break;
+                    case "4":
+                        document.write("bốn ");
+                        break;
+                    case "5":
+                        document.write("năm ");
+                        break;
+                    case "6":
+                        document.write("sáu ");
+                        break;
+                    case "7":
+                        document.write("bảy ");
+                        break;
+                    case "8":
+                        document.write("tám ");
+                        break;
+                    case "9":
+                        document.write("chín ");
+                        break;
+                    default:
+                        document.write( arr[i] + " is not a number ");
+                }
+            }
+    }
+    
+    function bai_5() {
+       
+    }
+</script>
+</body>
+</html>

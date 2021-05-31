@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(degreeC) {
+            this.degreeC= degreeC;
+        }
+        getDegreeF() {
+            return (this.degreeC*9/5+32);
+        }
+        getDegreeK() {
+            return (this.degreeC+273.15);
+        }
+    }
+    let temperature = new Temperature(25);
+    let degreeF=temperature.getDegreeF();
+    let degreeK=temperature.getDegreeK();
+    document.write("Fahrenheit degree is "+degreeF +"</br>");
+    document.write("Kelvin degree is "+degreeK);
+</script>
+</body>
+</html>
