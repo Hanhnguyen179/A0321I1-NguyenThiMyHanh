@@ -1,12 +1,12 @@
-package kiem_tra_so_nguyen_to;
+package bai_2.thuc_hanh.kiem_tra_so_nguyen_to;
 import java.util.Scanner;
-public class CheckPrime {
+public class CheckPrimeNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
         if(number<2)
-            System.out.println(number + " is not a prime");
+            System.out.println(number + " is not a prime number");
         else {
             int i = 2;
             boolean check = true;
@@ -18,9 +18,9 @@ public class CheckPrime {
                 i++;
             }
             if (check)
-                System.out.println(number + " is a prime");
+                System.out.println(number + " is a prime number");
             else
-                System.out.println(number + " is not a prime");
+                System.out.println(number + " is not a prime number");
         }
     }
 }

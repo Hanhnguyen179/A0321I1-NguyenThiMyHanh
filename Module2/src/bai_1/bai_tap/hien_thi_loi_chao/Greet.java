@@ -1,4 +1,4 @@
-package hien_thi_loi_chao;
+package bai_1.bai_tap.hien_thi_loi_chao;
 import java.util.Scanner;
 public class Greet {
     public static void main(String[] args) {

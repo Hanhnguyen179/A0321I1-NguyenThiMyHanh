@@ -1,4 +1,4 @@
-package bai_2.thiet_ke_menu_cho_ung_dung;
+package thiet_ke_menu_cho_ung_dung;
 import java.util.Scanner;
 public class DesignMenu {
     public static void main(String[] args) {
